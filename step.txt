@@ -1,0 +1,10 @@
+python eye.py \
+	--shape-predictor shape_predictor_68_face_landmarks.dat \
+	--video blink_detection_demo.mp4
+
+echo "# The-Eye" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sreeragrnandan/The-Eye.git
+git push -u origin master
