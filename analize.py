@@ -1,5 +1,5 @@
 import pymysql
-
+from playsound import playsound
 
 i=0
 connection = pymysql.connect(host="localhost",port=3307, user="root", passwd="", database="theEye")
@@ -46,6 +46,7 @@ while True:
         print(TotalTime)
         if TotalTime<4000 and BlinkCount==6:
             print("Help me")
+            playsound('audio/help.mp3')
             cursor.execute("TRUNCATE TABLE blinks;")
             break
     connection.close()  
